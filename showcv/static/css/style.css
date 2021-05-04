@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Helvetica";
+  }
+  body
+  {
+	  background-color: #f0eee9;
+  }
+ h1 {
+   background-color: #ffdc2b;
+   color: white;
+   font-weight: bold;
+   text-align: center;
+   padding: 10px;
+   margin-top: 0;
+ }
+ h3
+ {
+  text-align: center;
+  color: #ffffff;
+  background-color: #ffae00;
+  padding: 10px;
+  border-radius: 50px;
+ }
+
+.coln{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-left:20px;
+	margin-right:20px;
+	max-width:40%;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    width: 100%;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.info span
+{
+display:block;
+padding-top: 5px;
+padding-bottom: 5px;
+margin:auto;
+}
+
+.info span label
+{
+    background-color: #ffdc2b;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20%;
+}
+
+.logoutbt
+{
+  position: fixed;
+  right: 7px ;
+  top: 7px ;
+  text-align: center;
+   z-index: 1;
+}
+
+.homebt
+{
+  position: fixed;
+  left: 7px ;
+  top: 7px ;
+  text-align: center;
+   z-index: 1;
+}
+
+
+#userimg{
+max-width:150px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.cert{
+max-width:350px;
+margin-left: auto;
+margin-right: auto;
+}
+
+a {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+.mybt
+{
+color: #ffffff;
+background-color: #ffae00;
+padding: 10px;
+border-radius: 50px;
+}
+
+
+.myform{
+padding-top: 60px;
+text-align: center;
+}
