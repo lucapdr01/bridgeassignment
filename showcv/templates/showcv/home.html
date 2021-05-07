@@ -28,6 +28,8 @@
         {% for field, value in dati.items %}
         {% if field == "foto_profilo" %}
         <img src="{{ value }}" id="userimg"/>
+        {% elif field == "data_di_nascita" %}
+        <span><label>{{ field }}:</label> <span class="data">{{ value }}</span></span>
         {% else %}
         <span><label>{{ field }}:</label> {{ value }}</span>
         {% endif %}
@@ -40,6 +42,8 @@
             {% for field, value in form.items %}
             {% if field == "certificato" %}
             <img src="{{ value }}" class="cert"/>
+            {% elif field == "data_fine"%}
+            <span><label>{{ field }}:</label> <span class="data">{{ value }}</span></span>
             {% else %}
             <span><label>{{ field }}:</label> {{ value }}</span>
             {% endif %}
@@ -70,5 +74,24 @@
     </form>
     </div>
  </div>
+<script>
+
+    window.addEventListener('load', function () {
+        var date = document.getElementsByClassName("data")
+        for(i = 0; i < date.length; i++)
+        {
+            var data = date[i].innerHTML;
+            var datamod= changeDate(data);
+            document.getElementsByClassName("data")[i].innerHTML = datamod;
+        }
+        function changeDate(mydate){
+            let currentDate = new Date(mydate);
+            var month = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
+            "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"][currentDate.getMonth()];
+            var fd = currentDate.getDate() + ' ' + month + ' ' + currentDate.getFullYear();
+            return fd;
+        }
+    })
+</script>
 </body>
 </html>
